@@ -49,6 +49,6 @@ wtf.extend = function (fn) {
 wtf.plugin = wtf.extend
 wtf.version = version
 
-export { Models };
+export { models };
 
 export default wtf

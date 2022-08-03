@@ -1,9 +1,9 @@
 /*! wtf_wikipedia 10.0.2 MIT */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('isomorphic-unfetch')) :
-  typeof define === 'function' && define.amd ? define(['isomorphic-unfetch'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.wtf = factory(global.unfetch));
-})(this, (function (unfetch) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('isomorphic-unfetch')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'isomorphic-unfetch'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.wtf = {}, global.unfetch));
+})(this, (function (exports, unfetch) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -9465,6 +9465,9 @@
   wtf.plugin = wtf.extend;
   wtf.version = version;
 
-  return wtf;
+  exports["default"] = wtf;
+  exports.models = models;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
