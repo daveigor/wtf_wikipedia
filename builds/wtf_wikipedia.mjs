@@ -9457,4 +9457,4 @@ wtf.extend = function (fn) {
 wtf.plugin = wtf.extend;
 wtf.version = version;
 
-export { wtf as default };
+export { wtf as default, models };
